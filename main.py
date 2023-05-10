@@ -1,31 +1,32 @@
-class Movement:
-    def __init__(location, row, column):
-        location.row = row
-        location.column = column
-    def row(location, row):
-            if Direction == "north" or Direction == "North":
-                if location.row > 0:
-                    location.row -= 1
-                else:
-                    print("you can't go that way")
-            elif Direction == "south" or Direction == "South":
-                if location.row < 3:
-                    location.row += 1
-                else:
-                    print("you can't go that way")
-    def column(location, column):
-            if Direction == "East" or Direction == "east":
-                if location.column > 0:
-                    location.column -= 1
-                else:
-                    print("you can't go that way")
-            elif Direction == "west" or Direction == "West":
-                if location.column < 3:
-                    location.column += 1
-                else:
-                    print("you can't go that way")
 
-Direction = input("Would you like to travel North, South, East, West: ")
-m = Movement(0, 2)
-print(m.row)
-print(m.column)
+ 
+class Self:
+    def __init__(self, row, column):
+        self.row = row
+        self.column = column
+    def Movement(row, column):
+        Direction = input("Would you like to travel North, South, East, West: ")       
+        if Direction == "north" or Direction == "North":
+            if row > 0:
+                row -= 1
+            else:
+                print("you can't go that way")
+        elif Direction == "south" or Direction == "South":
+            if row < 3:
+                row += 1
+            else:
+                print("you can't go that way")
+        elif Direction == "East" or Direction == "east":
+            if column > 0:
+                column -= 1
+            else:
+                print("you can't go that way")
+        elif Direction == "west" or Direction == "West":
+            if column < 3:
+                column += 1
+            else:
+                print("you can't go that way")
+
+s = Self.Movement(2, 0)
+print(s.row)
+print(s.column)
