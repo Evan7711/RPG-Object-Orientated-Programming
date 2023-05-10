@@ -1,32 +1,17 @@
+#------------------------------------------------------------------------------
+# Title: Home Invasion
+# Assignment: OOP
+# Date: 09/05/23
+# Student; Evan Smart
+# Version: 1.0
+#------------------------------------------------------------------------------
+"""
+Assignment for using OOp to create an rpg
 
- 
-class Self:
-    def __init__(self, row, column):
-        self.row = row
-        self.column = column
-    def Movement(row, column):
-        Direction = input("Would you like to travel North, South, East, West: ")       
-        if Direction == "north" or Direction == "North":
-            if row > 0:
-                row -= 1
-            else:
-                print("you can't go that way")
-        elif Direction == "south" or Direction == "South":
-            if row < 3:
-                row += 1
-            else:
-                print("you can't go that way")
-        elif Direction == "East" or Direction == "east":
-            if column > 0:
-                column -= 1
-            else:
-                print("you can't go that way")
-        elif Direction == "west" or Direction == "West":
-            if column < 3:
-                column += 1
-            else:
-                print("you can't go that way")
+This file is used for actions and to combine all other files
+"""
+import inventory
+import map
 
-s = Self.Movement(2, 0)
-print(s.row)
-print(s.column)
+map.Location.current_location = map.LivingRoom
+print(map.Location.current_location.description)

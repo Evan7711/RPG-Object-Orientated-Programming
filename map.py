@@ -4,7 +4,7 @@ This is my map file
 import inventory
 # class for the rooms
 class Rooms:
-    def __init__(self, room, description, directions, items):
+    def __init__(self, room, description, directions=None, items=None):
         self.room = room
         self.description = description
         self.directions = directions
@@ -12,12 +12,12 @@ class Rooms:
         self.exits = {}
     
     def add_item(self, items):
-        self.items.append()
+        self.items.append(inventory)
 
     def remove_items(self, items):
-        self.items.remove()
+        self.items.remove(inventory)
 
-class Map:
+class Location:
     def __init__(self):
         self.current_location = None
         self.room = {}
