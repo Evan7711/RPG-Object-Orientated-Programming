@@ -1,6 +1,7 @@
 """
 This is my inventory file
 """
+
 #class for inventory
 class Inventory:
     def __init__(self, name, description):
